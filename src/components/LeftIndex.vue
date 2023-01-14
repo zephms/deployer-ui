@@ -8,4 +8,8 @@ function Test(params: any) {
     <el-button @click="Test('1')" text>按钮</el-button>
   </div>
 </template>
-<style scoped></style>
+<style scoped>
+el-button {
+  margin: 10px auto;
+}
+</style>

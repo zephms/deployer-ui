@@ -21,7 +21,7 @@ a,
   }
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   body {
     display: flex;
     place-items: center;
@@ -32,4 +32,21 @@ a,
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
+} */
+
+
+/* .button {
+  border: solid 1px;
+  border-radius: 3px;
+  display: inline-block;
+  min-width: 30px;
 }
+td {
+  border: solid 1px;
+}
+th {
+  border: solid 1px;
+}
+.terminal{
+  border: solid 1px;
+} */
