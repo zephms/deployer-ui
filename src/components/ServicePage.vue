@@ -59,6 +59,11 @@ function loadFormData() {
   });
 }
 
+function refreshData() {
+  INF("/service/refresh", (d: any) => {});
+  loadFormData();
+}
+
 const log = ref("service log");
 function loadServiceLog() {
   EXC("/service/log", { Len: 10 }, (d: any) => {
@@ -67,7 +72,10 @@ function loadServiceLog() {
 }
 </script>
 <template>
-  <el-button @click="loadFormData()" type="primary">刷新service</el-button>
+  <el-button @click="loadFormData()" type="primary">get service</el-button>
+  <el-button @click="refreshData()" type="primary"
+    >reload and get service</el-button
+  >
   <br />
   <el-table :data="form" style="width: 100%">
     <el-table-column prop="Name" label="Name" width="180" />
@@ -84,6 +92,9 @@ function loadServiceLog() {
       </template>
     </el-table-column>
   </el-table>
+  <br /><br />
+  <h3>Task</h3>
+
   <br /><br />
   <h3>服务日志</h3>
   <el-button @click="loadServiceLog()" type="primary">刷新log</el-button>
